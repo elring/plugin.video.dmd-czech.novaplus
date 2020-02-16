@@ -1,3 +1,12 @@
+2020-02-16
+ * Uprava po zmene stranek se zdrojem videa
+ * Zobrazeni "zalozek" na zacatku seznamu (Vse, Ukazky, Cele dily apod.)
+ * Vynechani dilu z voyo.cz
+2019-12-15
+ * Adaptace na novou podobu stranek s poradem
+2019-12-01
+ * Oprava opravy zobrazeni dalsich dilu po zmene stranek Nova Plus
+ * Prizpusobeni uvodnich kategorii na uvodni strance strankam Nova Plus
 2019-11-23
  * Oprava prehravani poradu s odkazem na specialni stranku poradu
  * Oprava zobrazeni dalsich dilu po zmene stranek Nova Plus
