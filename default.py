@@ -159,12 +159,12 @@ def VIDEOLINK(url,name):
     thumb = re.compile('<meta property="og:image" content="(.+?)">').findall(httpdata)
     thumb = thumb[0] if len(thumb) > 0 else ''
 
-    re_src = re.compile('var src = \{(.*?)\}').findall(httpdata);
-    if len(re_src) > 0:
-      urls = re.compile('\"(.*?)\"\:\"(.*?)\"\,?').findall(re_src[0].replace(" ", ""))
+    re_src = re.compile('\"HLS\"\:\[\{\"src\"\:\"(.*?)\"').findall(httpdata);
 
-      for num, url in enumerate(urls):
-        addLink('[B]' + str(num+1) + ' - ' + name + '[/B]',url[1],thumb,desc)
+    if len(re_src) > 0:
+      for num, url in enumerate(re_src):
+        url = url.replace("\\","")
+        addLink('[B]' + str(num+1) + ' - ' + name + '[/B]',url,thumb,desc)
     else:
       xbmcgui.Dialog().ok('Chyba', 'Video nelze přehrát', '', '')
 
